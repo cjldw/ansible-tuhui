@@ -1,0 +1,10 @@
+- name: kubernetes repo
+  hosts: dgm
+  remote_user: root
+  tasks:
+    - name: copy kubernetes repo to /etc/yum/
+      ansible:builtin.template:
+        src: /root/ansible/kubernetes.repo
+        dest: /etc/yum.repo.d/
+
+
